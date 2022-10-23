@@ -4,6 +4,7 @@
 }
 body{
 	background-size:100%;
+	background-repeat: no-repeat;
 }
 .yy{
 	text-shadow: 0px 10px 20px #000000;
@@ -21,26 +22,32 @@ body{
 }
 .zx{
 	User-select: none;
-	width: 250px;
+	width: 340px;
 	float: left;
-	 /* background-color: #000000; */
+	margin-left: 30px;
+	background-image: linear-gradient(to right,#f0f0f0,#0f0f0f);
+
 }
 .zx img{
 	height: 60px;
 	float: left;
-	
 }
 .zx p{
 	line-height: 60px;
-	font-size: 23px;
+	font-size: 32px;
 	color: white;
 	opacity: 1;
+	
+	padding-left: 30%;
+	
+	
+	
 }
 .yx{
 	height: 60px;
 	float: right;
 	padding-top: 20px;
-	/* background-color: #000000; */
+	
 
 }
 .yx li{
@@ -49,6 +56,7 @@ body{
 	text-align: center;
 	list-style-type:none;;
 	color: white;
+	
 }
 .yx a{
 	text-decoration-line: none;
@@ -186,4 +194,101 @@ body{
 	
 }
 
+/* /* /*  *****************game */ 
 
+
+/* .dk{
+	border:solid red ;
+	position: fixed;
+	top:100px;
+	width:1000px;
+	height:485px;
+
+
+}
+.dk img{
+	width:1000px;
+} */
+
+#main{
+		width: 1000px;
+		height: 485px;
+		position: relative;
+		margin: 50px auto;/*为了在此的观看效果，我选择了这个数据*/
+		overflow: hidden;/*因为设置了隐藏，所示的效果只有一张solid1*/
+		/*可在元素赠加和定位完成后进行影藏*/
+	}
+	/*
+	 * 为所以图片设置同main一样宽高不大推荐
+	 	因为，如果图片没进行过处理，强制改变宽高，容易产生变形，
+	 	图片将变得难看。
+	 * *//*为了使图片叠加所以我们使用absolute，在此之前
+	 * 	我们需要去它的父级添加一个relative。
+	 * */
+	#main .banner-slide{
+		position: absolute;
+		width: 1000px;
+		height: 485px; 
+		overflow: hidden;/*防止图片过大，超出范围，影响视觉*/
+		display:none;
+	}
+	#main .slide-active{
+		display: block;
+	}
+	/*
+	 * 挨个设置轮播图的图片
+	 * 为了方便在图片所在div加内容，标签
+	 * 我们选择把轮播图内容以background形式出现。
+	 */
+	#main .slide1{
+		background-image: url("img/num1.jpg");
+		background-attachment: fixed;
+	}
+	#main .slide2{
+		background-image: url("img/num2.jpg");
+	}
+	#main .slide3{
+		background-image: url("img/num3.jpg");
+	}
+	#main .slide4{
+		background-image: url("img/num4.jpg");
+	}
+	#main .slide5{
+		background-image: url("img/num5.jpg");
+	}
+	/*ul标签的移动*/
+	#main .dots #dots{
+		position: absolute;
+		margin-top: 560px;/*由于我设置了li高为40，总高600，所以进行
+		560的移动*/
+		margin-left: 275px;/*(1200-5*130)/2*/
+	}
+	#main .dots #dots li{
+		height: 40px;
+		width: 80px;
+		border-radius: 20%;
+		background: gray;/*在此的样式根据个人喜好自己添加*/
+		/*由于上面的定位，所以*/
+		float: left;/*为了是图标自左向右*/
+		margin-left: 50px;
+		list-style: none;
+	}
+	#main .dots #dots .li1{
+		background: blue;
+	}
+	#main #left-right .move{
+		position: absolute;
+		margin-top:260px;
+		height: 80px;
+		width: 40px;
+		font-size: 50px;/*设置<>大小*/
+		padding-left: 10px ;
+	}
+	/*左右分离*/
+	#main #left-right #next{
+		right:0;
+	}
+	/*触碰上下张有效果*/
+	#main #left-right .move:hover{
+		background: rgba(0,0,0,0.4);
+	}

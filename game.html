@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏锦集</title>
+		<link href="zcs.css"/ rel="stylesheet">
+		<link rel="stylesheet" href="swiper-bundle.min.css">
+		<style>
+			.swiper{
+				width:100%;
+				height: 700px;
+			}
+		</style>
+	
+	
+	</head>
+	<body background="img/01ceda5d980403a801211d53a651f3.jpg@2o.jpg">
+		<div class="xuanze"><!-- 选择栏 -->
+		
+			<!-- 选择栏左上角小图标 -->
+			<div class="zx">
+				<img src="img/个人博客.png"/>
+			<div><p>MY WORLD</p></div>
+			</div>
+			
+			<!-- 选择栏右上角选项 -->
+			<div class="yx">
+				<ul>
+					<li><a href="https://www.baidu.com">帮助中心</a></li>
+					<li><a href="game.html">游戏锦集</a></li>
+					<li><a href="gj.html">个人简介</a></li>
+					<li class="yy"><a href="index.html">首页</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="swiper">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide"><img src="img/num1.jpg" alt=""></div>
+		        <div class="swiper-slide"><img src="img/num2.jpg" alt=""></div>
+		        <div class="swiper-slide"><img src="img/num3.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num4.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num5.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num6.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num7.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num8.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num9.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num10.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/num11.jpg" alt=""></div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		    
+		    <!-- 如果需要导航按钮 -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+		    
+		    <!-- 如果需要滚动条 -->
+		    <div class="swiper-scrollbar"></div>
+		</div>
+
+
+		<script src="swiper-bundle.min.js"></script>
+		<script>        
+		  var mySwiper = new Swiper ('.swiper', {
+		    // direction: 'vertical', // 垂直切换选项
+		    loop: true, // 循环模式选项
+		    
+		    // 如果需要分页器
+		    pagination: {
+		      el: '.swiper-pagination',
+		    },
+		    
+		    // 如果需要前进后退按钮
+		    navigation: {
+		      nextEl: '.swiper-button-next',
+		      prevEl: '.swiper-button-prev',
+		    },
+		    
+		    // 如果需要滚动条
+		    scrollbar: {
+		      el: '.swiper-scrollbar',
+		    },
+		  })        
+		  </script>
+		
+		
+	</body>
+
+</html>
